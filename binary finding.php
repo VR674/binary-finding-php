@@ -25,7 +25,10 @@
 		{
 			$file_data = file_get_contents($path);
 			if($file_data == false)
+			{
 				echo 'Cant take data from file "' . $path . '"';
+				return "";
+			}
 			else
 				return $file_data;
 		}
